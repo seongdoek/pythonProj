@@ -2,11 +2,10 @@ import cx_Oracle
 
 conn = cx_Oracle.connect('scott','tiger','localhost:1521/XE')
 cursor = conn.cursor()
-
-cursor.execute("select * from emp ")
+cursor.execute("select * from emp where deptno=10 ")
 
 for item in cursor:
-    print( item[2])
+    print( item[1],item[5])
     break
 
 conn.close()
