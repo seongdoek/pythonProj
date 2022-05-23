@@ -5,7 +5,7 @@ cursor = conn.cursor()
 cursor.execute("select * from emp where deptno=10 ")
 
 for item in cursor:
-    print( item[1],item[5])
+    print( item[1],item[3])
     break
 
 conn.close()
